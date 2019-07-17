@@ -1,0 +1,95 @@
+@font-face {
+	font-family: "main font";
+	src: url("fonts/Economica/Economica-Regular.ttf");
+}
+
+body {
+	color: aqua;
+	background-color: black;
+	text-shadow: 0px 0px 5px aqua;
+	font-family: "main font";
+	font-size: 50px;
+}
+
+.border_box, .item_button {
+	box-shadow: 0px 0px 0.2em aqua;
+	box-sizing: border-box;
+	border: 1px solid aqua;
+	margin: 0.2em;
+}
+
+.item_button {
+	  height: 6em;
+    padding-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item_button div {
+	align-items: center;
+}
+
+#screen_container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+#header {
+	height: 3em;
+	line-height: 3em;
+}
+
+#content_container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+}
+
+#item_list {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+}
+
+#extended_item {
+	width: 75%;
+	overflow-y: auto;
+	position: relative;
+	padding: 0.5em;
+}
+
+#extended_item h1 {
+	margin: 0;
+	font-size: 1.3em;
+}
+
+#extended_item #project_dates {
+	font-size: 0.7em;
+}
+
+div::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 9px 13px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+    background-color: #52b4b0;
+}
+
+div::-webkit-scrollbar
+{
+	width: 0.5em;
+  background-color: #000000;
+}
+
+div::-webkit-scrollbar-thumb
+{
+	border-radius: 0px;
+	-webkit-box-shadow: inset 4px 6px 12px 0px rgba(0,0,0,.6);
+	background-color: aqua;
+}
+
+
