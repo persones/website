@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="forms">
+
+    </div>
+    <script>
+      fetch('schemas')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(schemas) {
+        for (let schemaName in schemas) {
+          console.log(schemaName);
+          let schema = schemas[schemaName];
+          let schemaElem = document.createElement('form');
+          document.querySelector('#forms').appendChild(schemaElem);
+          let title = document.createElement('h2');
+          title.innerHTML = schemaName;
+          schemaElem.appendChild(title);
+          for (let pathName in schema.paths) {
+            let path = schema.paths[pathName];
+            let formField;
+            switch (path.instance) {
+              case 'String':
+                formField = document.createElement('textarea');
+                break;
+              case 'Date':
+                formField = document.createElement('input');
+                formField.setAttribute('type', 'date');
+                break;
+              default:
+                continue;
+            }
+            let label = document.createElement('label');
+            label.innerHTML = pathName;
+            schemaElem.appendChild(label);
+            schemaElem.appendChild(formField);
+            schemaElem.appendChild(formField);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

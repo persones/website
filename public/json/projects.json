@@ -1,0 +1,28 @@
+{ "projects": [
+	{
+		"id": "ExploAIS",
+		"category": "exploratorium",
+		"start_date": "01/01/2016",
+		"end_date": "02/03/2016",
+		"text": "I got somewhat obsessed with AIS (Automatic Identification System), which is the protocol used by ships navigation systems to track other vessels' location. I built an exhibit called \"Ship Chatter\", that has a radio receiver, a BeagleBone computer, and two LCD displays, showing digital information as decoded by the receiver in AIS format, and then in human readable form as decoded by the BeagleBone. The decoding itself is done with ExploAIS - a pure JavaScript library I wrote. The output stream of the exhibit is fed to the Exploratorium's aggregator which I rewrote. The aggregator listens to several AIS streams, and provides a publically available, unified stream As a personal side project, I used the aggregated stream and the ExploAIS library, and made a realtime map of marine traffic in the San Francisco Bay",
+		"links": [
+			{
+				"text": "ExploAIS on BitBucket",
+				"link": "https://bitbucket.org/exploratorium/exploais"
+			},
+			{
+				"text": "Exploratorium AIS stream",
+				"link": "http://ais.exploratorium.edu"
+			}
+		]
+	},
+	{
+		"id": "project2",
+		"category": "exploratorium",
+		"start_date": "01/01/2016",
+		"end_date": "02/03/2016",
+		"text": "\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+	}
+	
+]	
+}
