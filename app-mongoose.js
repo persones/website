@@ -18,9 +18,18 @@ var projectSchema = new Schema({
   endDate: Date,
   name: String,
   html: String
-})
+});
+
+var workplaceSchema = new Schema({
+  name: String,
+  city: String,
+  state: String,
+  country: String
+});
+
 
 var Project = mongoose.model('Project', projectSchema);
+var Workplace = mongoose.model('Workplace', workplaceSchema);
 Project.find({}, (err, res) => {
   for (let i = 0; i < res.length; ++i) {
     console.log(res[i].name);
