@@ -50,3 +50,9 @@ app.get('/project/:projectName', (req, res) => {
     }
   });
 });
+
+app.get('/workplace/', (req, res) => {
+  Workplace.find({}, (err, workplaceList) => {
+    res.send({workplace: workplaceList});
+  })
+});
