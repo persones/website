@@ -31,36 +31,28 @@ window.onload = (event) => {
 		let filtertype = document.querySelector('#filter-type-selector').value
 		const response = await fetch(`project?${filtertype}=${event.target.value}`);
 		const json = await response.json();
-		for (let item of json.project) {
-			console.log(item);
-		}
-	});
-
-};
-
-
-
-function loadCategory(category) {
-	document.querySelector("#item_list").innerHTML = "";
-	projects.forEach((project) => {
-		
-		if (project.category == category) {
+		document.querySelector("#item_list").innerHTML = "";
+		for (let project of json.project) {	
 			let newButton = document.createElement("div");
 			newButton.classList.add("item_button");
-			newButton.innerHTML = project.id;
+			newButton.innerHTML = project.name;
 			newButton.addEventListener("click", (evt) => {
 				displayProject(project);
 			});
 			document.querySelector("#item_list").appendChild(newButton);
 		}
 	});
-}
+
+};
 
 function displayProject(project) {
-	animatedItems.splice(animatedItems.indexOf(currentlyDispalyedProject), 1);
-	currentlyDispalyedProject = new AnimatedProjects(project);
-	animatedItems.push(currentlyDispalyedProject);
-	
+	document.querySelector('#project_title').innerHTML = project.name;
+	document.querySelector('#project_dates').innerHTML = `${project.startDate}-${project.endDate}`;
+	document.querySelector('#project_text').innerHTML = project.html;
+					
+	//animatedItems.splice(animatedItems.indexOf(currentlyDispalyedProject), 1);
+	//currentlyDispalyedProject = new AnimatedProjects(project);
+	//animatedItems.push(currentlyDispalyedProject);	
 }
 
 let previousTime = 0;
