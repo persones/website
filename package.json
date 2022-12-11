@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/persones/website#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "forms-mongoose": "0.0.6",
     "mongoose": "^5.7.5"
   }
